@@ -11,8 +11,10 @@ description: >
   agents, and systematic quality passes (conciseness, coherence, citation
   audit, figure integrity, journal compliance). Use when the user wants to
   write a paper from their data/code/results, rewrite or submission-harden a
-  draft, emulate a specific author's or venue's style, audit citations or
-  baselines, or run reviewer-style audits on a manuscript.
+  draft, emulate a specific author's or venue's style, audit citations,
+  novelty, proofs, or baselines, run reviewer-style audits on a manuscript,
+  assemble a submission package (cover letter, blinded copy, statements), or
+  respond to referee reports with a point-by-point revision.
 ---
 
 # paper-forge — venue-targeted, author-emulating paper writing
@@ -37,8 +39,9 @@ concrete failure in that project.
 
 Start with the intake interview (`references/00-intake.md`): it selects
 **Mode A** (no draft yet — write the main draft from research artifacts;
-inserts phases R and D) or **Mode B** (existing draft — restyle/harden;
-phase R runs in audit-only form). Then run the phases in order. Each phase
+inserts phases R and D), **Mode B** (existing draft — restyle/harden;
+phase R runs in audit-only form), or **Mode C** (referee reports arrived —
+revision loop, `references/revision-mode.md`). Then run the phases in order. Each phase
 ends with a user checkpoint (STOP and get approval) before the next begins.
 Phases 1–4 are setup and typically run once; phases 5–7 loop.
 
@@ -53,9 +56,10 @@ Phases 1–4 are setup and typically run once; phases 5–7 loop.
 | R | Data analysis & results hardening: metric spine, baselines, leakage audit, figures, claims ledger (Mode A full; Mode B audit-only) | `data-analysis.md` | user approves ledger + interpretation |
 | D | Mode A only: contribution map, skeleton from exemplar, evidence-first v0 draft | `drafting.md` | per-section v0 acceptance |
 | 5 | Section-by-section drafting/restyling loop, tracked + surgical | `04-tracked-edits.md` | per-passage approval ("do it") |
-| 6 | Quality passes: conciseness, coherence, citations, figures, adversarial review | `05-review-passes.md`, `06-citation-audit.md` | per-pass findings approved as red edits |
-| 7 | Journal-compliance check against the venue profile | `07-journal-compliance.md` | compliance checklist signed off |
-| 8 | Bake markup, submission hygiene, final compile | `07-journal-compliance.md` | user says "bake" |
+| 6 | Quality passes: coherence, conciseness, positioning/novelty audit, proof rigor (theory), adversarial review, citations, figures | `05-review-passes.md`, `positioning-audit.md`, `proof-rigor.md`, `06-citation-audit.md` | per-pass findings approved as red edits |
+| 7 | Journal-compliance check against the venue profile (hard gates BLOCKING) | `07-journal-compliance.md` | compliance checklist signed off |
+| 8 | Bake markup, submission hygiene, final compile; assemble the submission package (cover letter, statements, reviewers, supplements) | `07-journal-compliance.md`, `submission-package.md` | user says "bake"; approves each package artifact |
+| C | Revision loop after referee reports: issue ledger → user triage → tracked fixes → response letter → resubmission package | `revision-mode.md` | user rules each disposition; signs off package |
 
 ## Phase 0 — Setup
 
@@ -204,13 +208,38 @@ until a round produces nothing new) → citation audit → figure integrity.
 Details and prompts in `references/05-review-passes.md` and
 `references/06-citation-audit.md`.
 
-## Phases 7–8 — Compliance and bake
+## Phases 7–8 — Compliance, bake, submission package
 
-Check the manuscript against the Phase-1 venue profile and the official author
-guidelines (structure, lengths, reference style, data/code policy,
-anonymization). Only after the user signs off: strip all revision macros,
-grep-verify **zero** leftover markers (count them; "mostly clean" is not
-clean), final compile, final commit. `references/07-journal-compliance.md`.
+Check the manuscript against the Phase-1 venue profile and the official
+author guidelines — hard gates first and BLOCKING (figure/table counts, page
+and abstract limits on the official class). Only after the user signs off:
+strip all revision macros (`scripts/bake_markup.py`), grep-verify **zero**
+leftover markers (count them; "mostly clean" is not clean), final compile,
+final commit. Then assemble the submission package — cover letter, blinded
+copy, author statements, suggested reviewers, supplements, preprint version
+(`references/submission-package.md`) — each artifact user-approved. Keep the
+uploaded files byte-exact in a tagged `submission/` snapshot: Mode C starts
+from it.
+
+## Mode C — revision after referee reports
+
+When the decision letter arrives: parse every report into a numbered issue
+ledger → the user rules each point (agree / partial / rebut) → fixes as
+tracked edits (new-experiment requests go through Phase R and the claims
+ledger — never faked to satisfy a reviewer) → point-by-point response letter
+with verified pointers into the revised PDF → post-fix consistency sweep →
+resubmission package with hard gates rechecked. Full procedure:
+`references/revision-mode.md`; letter skeleton:
+`templates/response-to-reviewers-template.md`.
+
+## Helper scripts
+
+`scripts/` ships runnable helpers (Python, stdlib): `check_gates.py` (hard
+gates: figures/tables/abstract/pages), `count_words.py` (per-section budget
+tracking), `bake_markup.py` (Phase-8 bake with zero-leftover and
+cite/label-parity verification), `check_register.py` (Layer-1 grep checks).
+Non-LaTeX toolchains: `references/toolchains.md` maps every mechanic to
+Word and Markdown.
 
 ## Working style
 

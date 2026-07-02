@@ -144,3 +144,60 @@ it (quote the supporting passage)?
 work (survey vs. original, misattributed coinage)?
 Verdict: OK / METADATA-WRONG (+correction) / UNSUPPORTED (+what the source
 actually says) / FABRICATED / UNVERIFIABLE.
+
+---
+
+## 10. Novelty scout (positioning audit; one agent per search angle)
+
+Search for published work related to this paper's novelty claims:
+<NOVELTY SENTENCES>. Your assigned angle: <keyword search with these terms /
+backward citation-chase from <sources> / forward citation-chase of <sources> /
+recent work of <authors> / last-2-years sweep of <venue + preprint servers>>.
+Return every candidate found: title, authors, year, venue, URL, and one line
+on why it might relate. Do not assess overlap — that is another agent's job.
+Cast wide; false positives are cheap, misses are expensive.
+
+## 11. Overlap assessor (one agent per candidate)
+
+Candidate: <citation + abstract/PDF path>. Our novelty claims:
+<NOVELTY SENTENCES>. From the candidate's actual text (read it; do not judge
+by title), determine what it does and give a verdict against each claim:
+UNRELATED / SHOULD-CITE (adjacent; strengthens positioning) / MUST-CITE (a
+referee would call its absence a gap) / NOVELTY-THREAT (does part of what we
+claim as new). Quote the candidate's text as evidence for any verdict above
+UNRELATED, and state in one sentence how our claim would need to be sharpened
+to be true relative to this work.
+
+## 12. Proof auditor (one agent per proof)
+
+Audit the proof of <RESULT> at <location> line by line. For every step name
+its justification: a stated assumption, a previously proved result (check it
+actually precedes this one), a cited standard theorem (check its hypotheses
+hold here), or algebra — which you re-derive yourself, checking inequality
+directions and signs by derivation, not by reading. Check quantifier order,
+symbols defined before use, boundary/degenerate cases, circularity, and
+whether every stated assumption is actually used. Verdict per step:
+JUSTIFIED / GAP (what is missing) / ERROR (with counter-derivation).
+"It is easy to see" passes only if you can perform the step as one named
+manipulation.
+
+## 13. Proof adversary
+
+Try to BREAK the proof of <RESULT>: construct a counterexample to the claim
+or to intermediate step <N>, or exhibit an instance where an unjustified
+step fails. You win by finding a concrete instance, not by rhetoric. If
+after genuine effort you cannot, concede in writing with one reason per
+objection you raised. Report: ATTACK (the instance, verifiable) / CONCEDE
+(reasons).
+
+## 14. Referee-response drafter (Mode C; one agent per ledger row)
+
+Ledger row: <reviewer point, verbatim> — disposition ruled by the user:
+<agree/partial/rebut>, change made: <what/where or none>. Draft the response
+entry: (1) the point, quoted; (2) the response — what was done and why, or
+the evidence-based rebuttal (cite the result/source/computation, never
+authority); (3) pointer to the revised text (§/page) with the new text
+quoted if short. Tone: professional, no gratitude per point, no
+defensiveness; if the reviewer misread, describe what was clarified, not
+that they erred. Verify the pointer against the revised PDF at <path>
+before returning.

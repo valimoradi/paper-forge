@@ -11,7 +11,8 @@ change.
 
 ```
 Phase –1 Intake: interview → Mode A (write the main draft from research
-         artifacts) or Mode B (restyle/harden an existing draft)
+         artifacts), Mode B (restyle/harden an existing draft), or
+         Mode C (revision after referee reports)
 Phase 0  Setup: branch, canonical file, tracked-edit macros, commit cadence
 Phase 1  Venue: download author guidelines + a stratified corpus — up to 20
          venue papers on the SAME TOPIC as yours (sole source of vocabulary
@@ -38,10 +39,16 @@ Phase D  (Mode A) Contribution map → skeleton from a venue exemplar →
          evidence-first v0 draft (methods → results → intro → abstract last)
 Phase 5  Drafting loop: section by section, every edit wrapped in red/yellow
          markup, surgical scope, per-passage approval, compile + commit each
-Phase 6  Quality passes: coherence → conciseness → reviewer rounds until dry
-         → citation download-and-verify audit → figure integrity
-Phase 7  Journal compliance vs. the measured venue profile
-Phase 8  Bake: strip markup (grep-verified to zero), submission hygiene
+Phase 6  Quality passes: coherence → proof rigor (theory) → conciseness →
+         positioning/novelty audit (find MISSING citations before a referee
+         does) → reviewer rounds until dry → citation download-and-verify
+         audit → figure integrity
+Phase 7  Journal compliance vs. the measured venue profile; hard gates block
+Phase 8  Bake (strip markup, grep-verified to zero) + submission package:
+         cover letter, blinded copy, statements, suggested reviewers,
+         supplements, preprint version
+Mode C   Revision loop: referee reports → issue ledger → user triage →
+         tracked fixes → point-by-point response letter → resubmission
 ```
 
 The design principles: nothing becomes permanent without human approval, and
@@ -78,13 +85,25 @@ references/
   academic-register.md         Layer 1: formal register + anti-AI-tell bans
   data-analysis.md             Phase R: results hardening + claims ledger
   drafting.md                  Phase D: contribution map, skeleton, v0 draft
+  positioning-audit.md         novelty threats + missing-citation sweep
+  proof-rigor.md               line-by-line proof audits + adversary loop
+  revision-mode.md             Mode C: referee reports → response letter
+  submission-package.md        cover letter, statements, reviewers, preprint
+  toolchains.md                Word/Markdown mechanics mapping
+  extras.md                    titles/abstracts, co-authors, talk handoff
   guardrails.md                hard rules from observed AI failures
+scripts/
+  check_gates.py               hard-gate counts (figures/tables/abstract/pages)
+  count_words.py               per-section word budgets
+  bake_markup.py               Phase-8 bake + zero-leftover + cite parity
+  check_register.py            Layer-1 grep checks
 templates/
   revision-macros.tex          \rev/\revdel/\yel/\yeldel LaTeX macros
   claims-ledger-template.md    number/figure → script/data/commit provenance
   paper-profile-template.md    intake answers + readiness gate
   venue-register-template.md   the journal's vocabulary/voice/phrase bank
   applied-style-guide-template.md  short per-manuscript style distillation
+  response-to-reviewers-template.md  Mode C issue ledger + letter skeleton
   venue-profile-template.md    skeleton for the measured venue profile
   style-guide-template.md      skeleton for the author style guide
   agent-prompts.md             copy-paste prompts for all 9 agent roles

@@ -6,8 +6,9 @@ wrong pipeline.
 ## Questions to ask the user
 
 1. **Venue**: target journal/conference? Secondary venue? (→ Phase 1)
-2. **Draft status**: is there an existing draft, or are we writing from
-   research artifacts (code, data, results, notes)?
+2. **Draft status**: is there an existing draft, are we writing from
+   research artifacts (code, data, results, notes) — or has the paper been
+   submitted and referee reports arrived (→ Mode C)?
 3. **Results status**: are the experiments finished and trusted? Are there
    numbers/figures the user considers final, or does analysis still need to
    run? **Writing never proceeds on top of unverified numbers.**
@@ -22,9 +23,9 @@ wrong pipeline.
    approved (see modes below).
 7. **Target author**: whose style to emulate (or an exemplar paper)? Second
    anchor? (→ Phase 2)
-8. **Toolchain**: LaTeX (assumed default)? If Word/Markdown, tracked-edit
-   macros are replaced by the native change-tracking or diff-based review;
-   everything else transfers.
+8. **Toolchain**: LaTeX (assumed default)? Word and Markdown are supported
+   with adapted mechanics — see `references/toolchains.md` for the mapping
+   (tracked edits, bake, and gate checks per toolchain).
 9. **Constraints**: deadline, page limit, double-blind, model policy for
    sub-agents.
 
@@ -55,7 +56,18 @@ the very first edit. If the draft contains empirical claims, run Phase R in
 audit-only form (claims ledger + verification, no new analysis) before
 Phase 5, so prose is never polished on top of numbers that will change.
 
-## Readiness gate (both modes)
+## Mode C — revision after referee reports
+
+For papers already submitted, when the decision letter arrives. Skips
+straight to the revision loop (`references/revision-mode.md`): issue ledger
+from the reports → user triage → tracked fixes (new-experiment requests
+route through Phase R) → point-by-point response letter → post-fix
+consistency sweep → resubmission package. Phase-1/2/3 artifacts (venue
+profile, register, style guides, claims ledger) are reused from the original
+submission; rebuild them only if the resubmission targets a different
+journal.
+
+## Readiness gate (Modes A and B)
 
 Do not enter Phase 5 (prose work) until:
 - [ ] every number destined for the paper has a generating artifact

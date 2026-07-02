@@ -63,14 +63,25 @@ Prompt templates in `templates/agent-prompts.md`.
    ("assume the cited method's authors will read our code").
 9. **Citation auditor.** Separate pass, own reference:
    `06-citation-audit.md`.
+10. **Positioning/novelty scout.** Finds MISSING citations and novelty
+    threats before a referee does — multi-modal literature sweep, overlap
+    verdicts, user triage. Own reference: `positioning-audit.md`.
+11. **Proof auditor + adversary** (theory papers). Line-by-line proof
+    audits and a prover/adversary loop for contested proofs. Own reference:
+    `proof-rigor.md`. The one pass where a stronger model is usually worth
+    it (confirm with the user).
 
 ## Recommended Phase-6 order
 
 1. Coherence/notation sweep (cheap, unblocks everything else)
-2. Conciseness pipeline, section by section
-3. Adversarial reviewer rounds, until dry
-4. Citation audit (after prose is stable, so cites do not churn)
-5. Figure integrity + claims-vs-evidence (last, against the near-final text)
+2. Proof rigor (theory papers — before prose polish, since repairs change
+   prose)
+3. Conciseness pipeline, section by section
+4. Positioning/novelty audit (before reviewer rounds, so positioning fixes
+   land first)
+5. Adversarial reviewer rounds, until dry
+6. Citation audit (after prose is stable, so cites do not churn)
+7. Figure integrity + claims-vs-evidence (last, against the near-final text)
 
 ## Granularity pattern
 
