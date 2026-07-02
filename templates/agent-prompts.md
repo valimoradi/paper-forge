@@ -11,8 +11,10 @@ touch text outside their assigned span.
 
 You are rewriting one passage of an academic manuscript in the style of
 <AUTHOR>, for submission to <VENUE>. Authorities, in order of precedence:
-(1) the venue profile at <path>, (2) the fidelity guardrails, (3) the style
-guide at <path>.
+(1) the fidelity guardrails, (2) the venue profile at <path> and venue
+register at <path> (write with THIS journal's vocabulary, voice, and phrase
+bank), (3) the author style guide at <path>, (4) the academic base layer at
+references/academic-register.md.
 Rewrite ONLY the passage between the markers. Keep byte-identical: equations,
 notation, numbers, citations, labels, theorem conditions. Wrap every changed
 span in \rev{}/\revdel{} (substantive) or \yel{}/\yeldel{} (style-only).
@@ -66,10 +68,16 @@ judging style; only information loss.
 
 ## 4c. Style checker
 
-Check section <X> against the style guide at <path>, rule by rule. Report
-violations as (rule #, exact phrase, fix). Also run the register bans:
-em-dashes, rhetorical questions, hype words, \textbf in prose, formulaic
-transitions, rule-of-three tics.
+Check section <X> against all three style layers, rule by rule, and report
+violations as (layer, rule #, exact phrase, fix):
+(1) academic base — references/academic-register.md hard bans (em-dashes,
+rhetorical questions, hype words, \textbf in prose, formulaic transitions,
+rule-of-three tics);
+(2) venue register at <path> — does the prose use THIS journal's vocabulary,
+voice, and terminology (flag words the venue corpus avoids; suggest the
+venue's preferred verb/term with its page-cited evidence);
+(3) author style guide at <path>.
+On conflicts, precedence is venue > author > base.
 
 ## 4d. Structure checker
 

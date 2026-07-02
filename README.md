@@ -13,12 +13,16 @@ change.
 Phase –1 Intake: interview → Mode A (write the main draft from research
          artifacts) or Mode B (restyle/harden an existing draft)
 Phase 0  Setup: branch, canonical file, tracked-edit macros, commit cadence
-Phase 1  Venue: download author guidelines + 5–10 reputable venue papers,
-         MEASURE the norms (abstract/intro length, structure, register)
+Phase 1  Venue: download author guidelines + 5–10 reputable venue papers;
+         MEASURE the structural norms (venue profile) AND extract how the
+         journal actually writes — vocabulary, voice, terminology, phrase
+         bank with verbatim quotes (venue register)
 Phase 2  Author: user names a target author/paper; download 4–6 of their
          papers; user approves the corpus
-Phase 3  Style guide: 12-dimension, corpus-grounded, verbatim page-cited
-         rules; generic anti-AI-tell register layer underneath
+Phase 3  Author style guide: 12-dimension, corpus-grounded, verbatim
+         page-cited rules. Prose is governed by a 3-layer stack:
+         academic base (bundled) < venue register < author voice,
+         venue winning on conflict
 Phase 4  Agent roster: author persona, supervisor persona (precision critic),
          adversarial venue reviewer, 4-agent conciseness pipeline,
          coherence sweeper, claims/figure verifiers, citation auditor
@@ -66,6 +70,7 @@ references/
   05-review-passes.md          agent roster + quality passes
   06-citation-audit.md         download-and-verify citation audit
   07-journal-compliance.md     compliance checklist + submission bake
+  academic-register.md         Layer 1: formal register + anti-AI-tell bans
   data-analysis.md             Phase R: results hardening + claims ledger
   drafting.md                  Phase D: contribution map, skeleton, v0 draft
   guardrails.md                hard rules from observed AI failures
@@ -73,6 +78,7 @@ templates/
   revision-macros.tex          \rev/\revdel/\yel/\yeldel LaTeX macros
   claims-ledger-template.md    number/figure → script/data/commit provenance
   paper-profile-template.md    intake answers + readiness gate
+  venue-register-template.md   the journal's vocabulary/voice/phrase bank
   applied-style-guide-template.md  short per-manuscript style distillation
   venue-profile-template.md    skeleton for the measured venue profile
   style-guide-template.md      skeleton for the author style guide

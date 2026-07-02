@@ -46,7 +46,7 @@ Phases 1–4 are setup and typically run once; phases 5–7 loop.
 |-------|--------------|-----------|------------|
 | –1 | Intake interview; mode selection; paper profile | `00-intake.md` | user confirms mode + profile |
 | 0 | Repo, branch, canonical file, revision macros, auto-commit | `04-tracked-edits.md` | branch + macros confirmed |
-| 1 | Venue selection; build a venue profile from real recent papers + author guidelines | `01-venue-profile.md` | user confirms venue profile |
+| 1 | Venue selection; venue profile (structure) + venue register (how the journal writes) from real recent papers + author guidelines | `01-venue-profile.md` | user confirms profile + register |
 | 2 | Target author / exemplar paper; download the author corpus | `02-corpus.md` | user approves corpus list |
 | 3 | Build the corpus-grounded style guide (verbatim, page-cited) | `03-style-guide.md` | user approves style guide |
 | 4 | Define the agent roster (personas, checkers) | `05-review-passes.md` | user confirms roster + model policy |
@@ -75,16 +75,23 @@ Phases 1–4 are setup and typically run once; phases 5–7 loop.
   (`templates/auto-commit-watcher.md`), but remember the watcher does not
   compile; compiling is your job before reporting done.
 
-## Phase 1 — Venue profile
+## Phase 1 — Venue profile and venue register
 
 Ask the user for the target venue (and any secondary venue, e.g. a conference
-presentation of the same work). Then build an evidence-based profile of that
-venue: download 5–10 recent, well-regarded papers from it, download the
-official author guidelines, and *measure* the norms (abstract length, intro
-length, related-work placement, proof placement, section skeleton, claim
-register). Do not work from remembered "journal style" folklore; measure real
-papers. Full procedure in `references/01-venue-profile.md`, output skeleton in
-`templates/venue-profile-template.md`.
+presentation of the same work). Then build two evidence-based artifacts from
+5–10 recent, well-regarded papers plus the official author guidelines:
+
+1. **Venue profile** (structure): *measured* norms — abstract length, intro
+   length, related-work placement, proof placement, section skeleton, claim
+   register. Skeleton: `templates/venue-profile-template.md`.
+2. **Venue register** (style): how papers in this journal are actually
+   written — its working vocabulary (which verbs introduce contributions and
+   state results, counted across the corpus), voice and tense conventions,
+   preferred terminology, hedging norms, and a verbatim page-cited phrase
+   bank. Skeleton: `templates/venue-register-template.md`.
+
+Do not work from remembered "journal style" folklore; measure real papers.
+Full procedure in `references/01-venue-profile.md`.
 
 ## Phase 2 — Target author corpus
 
@@ -96,16 +103,18 @@ the target author, preferring papers published in the target venue. Present
 the list (title, venue, year, file path) and STOP for approval before using
 it. Procedure in `references/02-corpus.md`.
 
-## Phase 3 — Style guide
+## Phase 3 — Author style guide (Layer 3 of the style stack)
 
 From the approved corpus, build a corpus-grounded style guide: ~12 analysis
 dimensions, each dimension gets one imperative rule backed by 2–8 **verbatim,
-page-cited quotes** from the corpus. Never paraphrase the evidence. Layer a
-generic academic-register ruleset (anti-AI tells: no em-dashes, no rhetorical
-questions, no hype, no `\textbf` in prose, no rule-of-three tics) *under* the
-author guide — author style rides on top of the venue register, never instead
-of it. Procedure and dimension list in `references/03-style-guide.md`,
-skeleton in `templates/style-guide-template.md`.
+page-cited quotes** from the corpus. Never paraphrase the evidence. The
+manuscript's prose is governed by a three-layer stack, all always in force:
+Layer 1 = the bundled academic base (`references/academic-register.md`:
+formal register + anti-AI-tell hard bans), Layer 2 = the venue register
+(Phase 1), Layer 3 = this author guide. On conflict: venue beats author;
+both override the base only with verbatim corpus evidence. Procedure and
+dimension list in `references/03-style-guide.md`, skeleton in
+`templates/style-guide-template.md`.
 
 ## Phase 4 — Agent roster
 

@@ -51,18 +51,25 @@ Produce two artifacts:
 (The two filenames are suggestions; keep whatever names the user prefers, but
 keep two artifacts: one portable, one applied.)
 
-## The register layer underneath
+## The style stack: where this guide sits
 
-The author guide rides ON TOP of a generic academic-register layer that is
-always in force (if the `academic-style` skill is installed, invoke it; else
-enforce directly):
+The author guide is Layer 3 of a three-layer stack, all three always in
+force:
 
-- no em-dashes; no rhetorical questions; no colloquialisms or metaphors
-- no hype/intensifier words ("reliably", "remarkably", "crucially")
-- no formulaic AI transitions; no rule-of-three / "not just X, it's Y" tics
-- no second person, no exclamation
-- **no `\textbf` in running prose or as pseudo-headers**
-- no unqualified over-claiming; every claim exactly as strong as the evidence
+1. **Layer 1 — academic base** (`references/academic-register.md`, bundled):
+   formal register plus the anti-AI-tell hard bans (no em-dashes, rhetorical
+   questions, hype words, `\textbf` in prose, formulaic transitions,
+   rule-of-three tics, over-claiming).
+2. **Layer 2 — venue register** (`venue-register.md`, built in Phase 1 from
+   the venue corpus): this journal's actual vocabulary, voice, terminology,
+   and phrase bank.
+3. **Layer 3 — author voice** (this phase): the target author's structural
+   and narrative techniques.
+
+Precedence on conflict: venue register beats author voice; both may override
+the base layer only with verbatim corpus evidence. During Phase 3, record
+every author-vs-venue clash you discover in `venue-register.md`'s conflicts
+section so writer and checker agents resolve it the same way every time.
 
 ## The concision gate
 
