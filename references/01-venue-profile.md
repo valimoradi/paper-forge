@@ -15,18 +15,49 @@ actually written — Layer 2 of the style stack; see
   main body vs. the appendix / e-companion. Decide this early and record it.
 - Field and subfield, so the "reputable papers" search is scoped correctly.
 
-## Step 2. Download the venue's official author guidelines
+## Step 2. Download the official author guidelines and LaTeX template
 
-Fetch the journal's submission/author-guidelines page and extract into the
-venue profile:
+Fetch the journal's submission/author-guidelines page. Three kinds of
+content come out of it, treated differently:
 
-- abstract word limit; page/word limit for the body
+**Hard gates — official limits that are NEVER exceeded, at any phase.**
+Violating one is a desk-reject risk; no style or content argument overrides
+it. Extract each with the exact quote and URL:
+
+- maximum number of figures (and whether appendix/e-companion figures count
+  toward it)
+- maximum number of tables
+- page or word limit for the body; abstract word limit
+- any limits on references, title length, or number of appendices
+- supplementary-material rules: what may legally be moved out of the body
+
+Hard gates are not Phase-7 afterthoughts: they become **budgets** the moment
+they are known. Phase D allocates the skeleton's figures, tables, and words
+within them; Phase R selects which ≤N figures carry the story; Phase 7 only
+confirms what the whole pipeline already respected. If a journal accepts at
+most 5 figures, the paper never has a 6th "to cut later".
+
+**Submission mechanics** (rules, not limits):
+
 - reference style (bst/csl), bibliography-vs-appendix ordering
 - structure requirements (structured abstract? separate related-work section
   allowed or woven into intro? e-companion/online-supplement conventions)
 - anonymization / double-blind rules
 - data & code availability policy
-- figure/table format rules
+- figure/table format rules (fonts, resolution, color policy)
+
+**Official LaTeX template/class.** If the venue publishes one (`.cls`/`.sty`,
+`.bst`, sample `.tex`), download the full bundle into
+`venue_corpus/<venue>/template/` and build the manuscript on it:
+
+- Mode A: the Phase-D v0 is created from the official sample `.tex`, not a
+  generic article class.
+- Mode B: migrate the existing draft onto the official class as soon as this
+  step downloads it, before any prose passes (the migration is one tracked
+  commit of its own, touching preamble only).
+- Never measure a page-limit gate against a different class — margins,
+  fonts, and spacing change the count. If no template exists, record the
+  venue's formatting spec and mimic it.
 
 ## Step 3. Build a stratified venue corpus (three strata)
 

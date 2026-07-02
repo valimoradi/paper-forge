@@ -2,6 +2,28 @@
 
 Approved by user: <date>
 
+## Hard gates (official limits — NEVER exceed, at any phase)
+
+Budgets from day one, blocking checks at Phase 7. Quote the guidelines
+verbatim; do not infer limits from sampled papers.
+
+| Limit | Value | Exact quote + URL | Appendix/e-companion counts? |
+|-------|-------|-------------------|------------------------------|
+| Max figures | | | |
+| Max tables | | | |
+| Body pages/words | | | |
+| Abstract words | | | |
+| Other (refs, title, ...) | | | |
+
+## Official LaTeX template
+
+- Bundle (`.cls`/`.sty`/`.bst`/sample `.tex`): `venue_corpus/<venue>/template/`
+  — or: none published; formatting spec recorded below
+- Manuscript built on it since: <phase/date>
+  (Mode A: v0 created from the official sample; Mode B: draft migrated
+  immediately after download, before prose passes. Page-limit gates are only
+  meaningful when compiled on this class.)
+
 ## Targets (arbiter in all style conflicts)
 
 | Item | Venue norm (measured) | Source |

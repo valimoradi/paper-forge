@@ -19,7 +19,11 @@ Build the section skeleton by diffing against the Phase-1 structural exemplar
 related-work placement, proof/appendix split, and the body-vs-appendix triage
 decided in Phase 1. Write one-line section briefs: what each section must
 establish, its word budget (venue medians), and which contributions it
-carries. User approves the skeleton.
+carries. The skeleton also allocates the venue's **hard-gate budgets**:
+which ≤N figures and ≤M tables go where, and section word budgets that sum
+to within the body limit — the gates are spent here, not discovered violated
+in Phase 7. If the venue publishes an official LaTeX template, v0 is created
+from its sample file. User approves the skeleton.
 
 ## D3. Drafting order
 

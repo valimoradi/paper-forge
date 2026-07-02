@@ -46,7 +46,7 @@ Phases 1–4 are setup and typically run once; phases 5–7 loop.
 |-------|--------------|-----------|------------|
 | –1 | Intake interview; mode selection; paper profile | `00-intake.md` | user confirms mode + profile |
 | 0 | Repo, branch, canonical file, revision macros, auto-commit | `04-tracked-edits.md` | branch + macros confirmed |
-| 1 | Venue selection; stratified corpus (≤20 topic-matched + top 10 + latest 10); venue profile (structure) + venue register (how the journal writes THIS topic) | `01-venue-profile.md` | user approves corpus strata, then profile + register |
+| 1 | Venue selection; stratified corpus (≤20 topic-matched + top 10 + latest 10); venue profile (structure) + venue register (how the journal writes THIS topic) + hard gates & official LaTeX template | `01-venue-profile.md` | user approves corpus strata, then profile + register |
 | 2 | Target author / exemplar paper; download the author corpus | `02-corpus.md` | user approves corpus list |
 | 3 | Build the corpus-grounded style guide (verbatim, page-cited) | `03-style-guide.md` | user approves style guide |
 | 4 | Define the agent roster (personas, checkers) | `05-review-passes.md` | user confirms roster + model policy |
@@ -101,6 +101,16 @@ the corpus plus the official author guidelines, build two artifacts:
    state results, counted across Stratum A), voice and tense conventions,
    preferred terminology, hedging norms, and a verbatim page-cited phrase
    bank. Skeleton: `templates/venue-register-template.md`.
+
+Phase 1 also extracts the venue's **hard gates** — official limits (max
+figures, max tables, page/word limits, abstract limit) quoted verbatim from
+the guidelines. Hard gates are never exceeded at any phase: they are budgets
+in Phases R and D and blocking checks in Phase 7. If the journal accepts at
+most 5 figures, the paper never has a 6th. And if the venue publishes an
+official LaTeX template/class, download it and build the manuscript on it
+(Mode A: v0 starts from the official sample; Mode B: migrate the draft onto
+it before any prose passes) — page-limit gates only mean anything on the
+official class.
 
 Do not work from remembered "journal style" folklore; measure real papers.
 Full procedure in `references/01-venue-profile.md`.

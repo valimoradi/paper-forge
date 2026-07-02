@@ -5,6 +5,23 @@
 Diff the manuscript against the Phase-1 venue profile AND the official author
 guidelines. Checklist (extend per venue):
 
+**Hard gates (BLOCKING — quoted official limits; a violation stops
+submission, no exceptions)**
+- [ ] Figure count ≤ the venue's maximum (count them; check whether
+      appendix/e-companion figures count toward the gate)
+- [ ] Table count ≤ the venue's maximum
+- [ ] Body within the page/word limit, **compiled on the venue's official
+      LaTeX class** — a page count on any other class is meaningless
+- [ ] Abstract within the official word limit
+- [ ] Any other quoted limits (references, title length, appendix count)
+- [ ] Manuscript actually built on the official template/class, with its
+      bst/csl in use
+
+These were budgets from Phase 1 onward (skeleton allocation in Phase D,
+figure selection in Phase R); Phase 7 confirms nothing drifted over a gate.
+If one is violated, cutting to fit is a red-edit round of its own before
+anything else proceeds.
+
 **Lengths (measured, not eyeballed)**
 - [ ] Abstract within the venue limit and shaped per the profile (e.g. ~150
       words, one setup sentence, contribution-first)

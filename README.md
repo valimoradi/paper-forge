@@ -18,7 +18,10 @@ Phase 1  Venue: download author guidelines + a stratified corpus — up to 20
          and terminology), the venue's top 10 (structure norms), and the 10
          latest (current conventions). MEASURE the structural norms (venue
          profile) AND extract how the journal writes this topic — lexicon,
-         voice, phrase bank with verbatim quotes (venue register)
+         voice, phrase bank with verbatim quotes (venue register). Extract
+         HARD GATES (max figures/tables, page & abstract limits — budgets
+         from day one, never exceeded) and download the official LaTeX
+         template; the manuscript is built on it
 Phase 2  Author: user names a target author/paper; download 4–6 of their
          papers; user approves the corpus
 Phase 3  Author style guide: 12-dimension, corpus-grounded, verbatim

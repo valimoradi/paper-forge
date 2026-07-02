@@ -78,6 +78,11 @@ before any analysis is summarized. Checks learned from experience:
 - Copy step: generated artifacts are copied into the paper's figures
   directory by the script itself, so the paper never shows a stale figure
   (results directories are often gitignored; the paper's copies are not).
+- **Figure budget**: the venue's hard gate on figure count (venue profile)
+  caps this phase's output. If the journal accepts at most N figures, select
+  the ≤N figures that carry the paper's story; everything else goes to the
+  appendix/e-companion only if the gate permits it there, and is otherwise
+  dropped. Never produce a paper figure "to cut later".
 - Design rules from hard experience: choose the plot that answers a specific
   reader question (overlaying dozens of curves conveys nothing — use scatter
   vs. a
