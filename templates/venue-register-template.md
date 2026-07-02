@@ -1,9 +1,13 @@
 # Venue register — <VENUE> (Layer 2 of the style stack)
 
 How papers in this journal are actually written, extracted from the
-venue corpus in `venue_corpus/<venue>/` (same papers as the venue profile).
-Every entry is backed by verbatim, page-cited quotes; never paraphrase the
-evidence. Approved by user: <date>
+stratified venue corpus in `venue_corpus/<venue>/`. Sourcing rule: the
+lexicon, terminology, and phrase bank below come from **Stratum A
+(topic-matched papers) only** — the manuscript must sound like this venue's
+papers on this topic, not its other subfields. Voice, tense, hedging, and
+rhythm draw on all strata, preferring current practice (Stratum C) where
+flagship and latest papers differ. Every entry is backed by verbatim,
+page-cited quotes; never paraphrase the evidence. Approved by user: <date>
 
 ## Voice and person
 

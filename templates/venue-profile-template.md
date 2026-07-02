@@ -24,14 +24,26 @@ Approved by user: <date>
 - data & code policy:
 - figure format rules:
 
-## Sampled papers (5–10, in `venue_corpus/<venue>/`)
+## Venue corpus (stratified, in `venue_corpus/<venue>/`)
 
-| # | Paper | Year | Why selected | Abstract w. | Intro w. |
+Topic terms used for Stratum A search (confirmed by user): <keywords>
+
+**Stratum A — topic-matched (up to 20; drives vocabulary/terminology):**
+| # | Paper | Year | Topic terms matched | Abstract w. | Intro w. |
+|---|-------|------|---------------------|-------------|----------|
+
+**Stratum B — venue flagship (top 10; drives structure/positioning norms):**
+| # | Paper | Year | Why flagship | Abstract w. | Intro w. |
 |---|-------|------|--------------|-------------|----------|
+
+**Stratum C — latest (10 most recent; catches current conventions):**
+| # | Paper | Year | Issue | Abstract w. | Intro w. |
+|---|-------|------|-------|-------------|----------|
 
 ## Structural exemplar
 
-The ONE paper the manuscript is diffed against in compliance passes:
+The ONE paper the manuscript is diffed against in compliance passes
+(from Stratum A, ideally by the target author):
 - <citation + path>
 
 ## Dual-venue decision (if any)

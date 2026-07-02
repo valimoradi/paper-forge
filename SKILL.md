@@ -46,7 +46,7 @@ Phases 1–4 are setup and typically run once; phases 5–7 loop.
 |-------|--------------|-----------|------------|
 | –1 | Intake interview; mode selection; paper profile | `00-intake.md` | user confirms mode + profile |
 | 0 | Repo, branch, canonical file, revision macros, auto-commit | `04-tracked-edits.md` | branch + macros confirmed |
-| 1 | Venue selection; venue profile (structure) + venue register (how the journal writes) from real recent papers + author guidelines | `01-venue-profile.md` | user confirms profile + register |
+| 1 | Venue selection; stratified corpus (≤20 topic-matched + top 10 + latest 10); venue profile (structure) + venue register (how the journal writes THIS topic) | `01-venue-profile.md` | user approves corpus strata, then profile + register |
 | 2 | Target author / exemplar paper; download the author corpus | `02-corpus.md` | user approves corpus list |
 | 3 | Build the corpus-grounded style guide (verbatim, page-cited) | `03-style-guide.md` | user approves style guide |
 | 4 | Define the agent roster (personas, checkers) | `05-review-passes.md` | user confirms roster + model policy |
@@ -78,15 +78,27 @@ Phases 1–4 are setup and typically run once; phases 5–7 loop.
 ## Phase 1 — Venue profile and venue register
 
 Ask the user for the target venue (and any secondary venue, e.g. a conference
-presentation of the same work). Then build two evidence-based artifacts from
-5–10 recent, well-regarded papers plus the official author guidelines:
+presentation of the same work). Build a **stratified venue corpus** — a venue
+publishes many kinds of papers, and the manuscript's vocabulary must match
+its own subfield's papers, not the venue average:
 
-1. **Venue profile** (structure): *measured* norms — abstract length, intro
-   length, related-work placement, proof placement, section skeleton, claim
-   register. Skeleton: `templates/venue-profile-template.md`.
-2. **Venue register** (style): how papers in this journal are actually
-   written — its working vocabulary (which verbs introduce contributions and
-   state results, counted across the corpus), voice and tense conventions,
+- **Stratum A**: up to 20 papers from this venue on the *same topic* as the
+  user's paper (topic keywords from the paper profile, confirmed with the
+  user) — sole source for vocabulary, terminology, and the phrase bank;
+- **Stratum B**: the venue's top 10 flagship papers — structure,
+  positioning, claim register;
+- **Stratum C**: the 10 most recent papers — current conventions.
+
+The user approves the stratified manifest before anything is measured. From
+the corpus plus the official author guidelines, build two artifacts:
+
+1. **Venue profile** (structure): *measured* norms across all strata —
+   abstract length, intro length, related-work placement, proof placement,
+   section skeleton, claim register. Skeleton:
+   `templates/venue-profile-template.md`.
+2. **Venue register** (style): how this journal's papers *on this topic* are
+   written — working vocabulary (which verbs introduce contributions and
+   state results, counted across Stratum A), voice and tense conventions,
    preferred terminology, hedging norms, and a verbatim page-cited phrase
    bank. Skeleton: `templates/venue-register-template.md`.
 

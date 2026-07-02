@@ -13,10 +13,12 @@ change.
 Phase –1 Intake: interview → Mode A (write the main draft from research
          artifacts) or Mode B (restyle/harden an existing draft)
 Phase 0  Setup: branch, canonical file, tracked-edit macros, commit cadence
-Phase 1  Venue: download author guidelines + 5–10 reputable venue papers;
-         MEASURE the structural norms (venue profile) AND extract how the
-         journal actually writes — vocabulary, voice, terminology, phrase
-         bank with verbatim quotes (venue register)
+Phase 1  Venue: download author guidelines + a stratified corpus — up to 20
+         venue papers on the SAME TOPIC as yours (sole source of vocabulary
+         and terminology), the venue's top 10 (structure norms), and the 10
+         latest (current conventions). MEASURE the structural norms (venue
+         profile) AND extract how the journal writes this topic — lexicon,
+         voice, phrase bank with verbatim quotes (venue register)
 Phase 2  Author: user names a target author/paper; download 4–6 of their
          papers; user approves the corpus
 Phase 3  Author style guide: 12-dimension, corpus-grounded, verbatim

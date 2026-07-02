@@ -5,6 +5,8 @@ create that directory at intake; the manuscript joins it in Phase D).
 
 - **Mode**: A (write main draft from research artifacts) / B (existing draft)
 - **Primary venue**: — **Secondary venue**:
+- **Topic keywords** (drive the venue corpus Stratum-A search; confirm with
+  user): <e.g. the subfield, method family, problem class>
 - **Paper type**: methods/theory / empirical / both
 - **Draft status**: none / partial (<path>) / complete (<path>)
 - **Results status**: final & trusted / needs verification / analysis pending
