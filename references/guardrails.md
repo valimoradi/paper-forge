@@ -1,0 +1,71 @@
+# Guardrails — hard rules from observed failures
+
+Each rule below exists because an AI assistant made the mistake repeatedly in
+a real month-long paper project. These override style preferences and apply to
+every agent in the roster. When the user corrects a word or behavior once,
+append it here so no agent reintroduces it.
+
+## Claims and truth
+
+1. **Never add a claim you have not verified.** No "the structure is too
+   rigid", no "the model overfits", no causal explanation — unless the
+   artifact (plot, table, proof, source paper) proving it is in hand.
+2. **Calibrate exactly.** Neither overstate ("computationally intractable"
+   for merely-hard, "real-world data" for simulated) nor understate.
+   Every word conveys a meaning the author must be able to defend for days.
+3. **Attribute known results.** If a property has a standard name (e.g.
+   Lipschitz gradient smoothness), use it and cite it; never present known
+   material as novel.
+4. **Every added word is reviewer attack surface.** Editorial asides,
+   meta-commentary ("we introduce them one at a time because..."), and vivid
+   metaphors invite questions. Default to the neutral technical statement.
+5. **Do not mention abandoned experiments or speculative future work** unless
+   the user asks. The paper reports what was done and holds.
+
+## Figures, numbers, code
+
+6. **Never narrate a figure or result from memory.** Regenerate the plot from
+   the actual code, look at it, then write. "Recovery is almost perfect" said
+   about a mess destroys trust permanently.
+7. **Run the user's actual code/notebooks; never reimplement from scratch**
+   and pass it off as the same experiment. Divergent reimplementations
+   produced wrong paper figures more than once.
+8. **Reimplemented baselines must match the cited method as published** — no
+   silent shortcuts "to make it work". Assume the method's authors will read
+   the released code.
+9. **No information leakage**: normalization constants, anchors, and
+   hyperparameters must not encode test-set or ground-truth information.
+10. **Repo/paper provenance**: any released code must reproduce the paper's
+    exact numbers and figures (verify by regeneration + checksum before
+    claiming reproducibility).
+
+## Citations
+
+11. **Never typeset a citation from memory.** Verify against a downloaded
+    source at insertion time or mark it TODO/unverified. See
+    `06-citation-audit.md` for the six observed failure modes.
+
+## Editing discipline
+
+12. **Surgical scope**: touch only the passage under discussion. No drive-by
+    improvements, reformatting, or restyling of neighboring text.
+13. **All changes wrapped in tracked markup**, however small; nothing
+    finalized without explicit approval naming the passage.
+14. **Recompile and visually confirm the PDF before reporting done.** A .tex
+    diff is not evidence the reader's document changed.
+15. **Commit after every discrete edit** (tex + freshly compiled pdf); never
+    batch sections into one diff.
+16. **One canonical manuscript** — one file, one branch; no scratch copies.
+17. **Cross-check prose against its own appendix** before editing any
+    proposition/lemma statement (inequality directions drift in paraphrase).
+
+## Register
+
+18. No `\textbf` in running prose or as pseudo-headers.
+19. No em-dashes, rhetorical questions, hype words, colloquialisms,
+    rule-of-three tics, formulaic transitions, second person.
+20. **No padding to seem accessible, no cutting purely to hit a word count.**
+    Length changes are justified only by comprehension gain or genuine
+    redundancy ("verbose = explainable in fewer words without loss").
+21. Do not restate already-defined notation or results; one light prose
+    cross-reference suffices.

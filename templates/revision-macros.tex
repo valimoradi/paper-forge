@@ -1,0 +1,19 @@
+% paper-forge tracked-edit macros.
+% RED  = substantive changes (claims, math-adjacent prose, citations, numbers, structure)
+% YELLOW (rendered orange for print legibility) = style-only changes
+% Baking for submission: replace \rev{x}/\yel{x} -> x, delete \revdel{x}/\yeldel{x},
+% then grep-verify zero occurrences of every macro below.
+
+\usepackage[normalem]{ulem}   % \sout strikethrough
+\usepackage{xcolor}
+
+% --- live macros for the CURRENT revision round ---
+\newcommand{\rev}[1]{\textcolor{red}{#1}}                 % new/changed text (substantive)
+\newcommand{\revdel}[1]{\textcolor{red}{\sout{#1}}}       % deleted text (substantive)
+\newcommand{\yel}[1]{\textcolor{orange}{#1}}              % new/changed text (style-only)
+\newcommand{\yeldel}[1]{\textcolor{orange}{\sout{#1}}}    % deleted text (style-only)
+
+% --- retired macros from PREVIOUS rounds: render as plain text, never write again ---
+% Example: \newcommand{\NEW}[1]{#1}
+% Keep retired definitions here so old text still compiles, but agents must
+% never emit them for new edits.
