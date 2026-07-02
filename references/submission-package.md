@@ -15,6 +15,16 @@ apply)
 - [ ] **Author statements**: contributions (CRediT if requested), conflicts
       of interest, funding, data & code availability (must match what the
       repo actually provides — claims-ledger reproducibility run backs this)
+- [ ] **AI-use / generative-tool disclosure**: check the venue's policy (most
+      now require one) and write the statement it asks for, describing how AI
+      assistance was used and affirming the authors are responsible for all
+      content. A pipeline this AI-heavy makes the disclosure mandatory, not
+      optional; never claim sole human authorship where the policy asks
+      otherwise
+- [ ] **Text-overlap / self-plagiarism check**: run the manuscript through a
+      similarity tool (the venue often runs iThenticate anyway) — reused
+      passages from the authors' own prior papers, proposals, or preprints
+      must be rewritten or quoted+cited, not silently carried over
 - [ ] **Suggested reviewers** (and opposed, if justified): qualified, no
       recent co-authors or same-institution researchers, with a one-line
       rationale each; the user picks from candidates

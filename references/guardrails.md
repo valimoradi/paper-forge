@@ -58,14 +58,18 @@ append it here so no agent reintroduces it.
 16. **One canonical manuscript** — one file, one branch; no scratch copies.
 17. **Cross-check prose against its own appendix** before editing any
     proposition/lemma statement (inequality directions drift in paraphrase).
+18. **A broken build is never "done" and never committed.** If an edit stops
+    the document compiling, fix it or revert the edit before reporting or
+    committing — do not commit a stale PDF beside broken source, and do not
+    report success from an errored compile.
 
 ## Register
 
-18. No `\textbf` in running prose or as pseudo-headers.
-19. No em-dashes, rhetorical questions, hype words, colloquialisms,
+19. No `\textbf` in running prose or as pseudo-headers.
+20. No em-dashes, rhetorical questions, hype words, colloquialisms,
     rule-of-three tics, formulaic transitions, second person.
-20. **No padding to seem accessible, no cutting purely to hit a word count.**
+21. **No padding to seem accessible, no cutting purely to hit a word count.**
     Length changes are justified only by comprehension gain or genuine
     redundancy ("verbose = explainable in fewer words without loss").
-21. Do not restate already-defined notation or results; one light prose
+22. Do not restate already-defined notation or results; one light prose
     cross-reference suffices.

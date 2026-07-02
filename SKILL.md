@@ -35,15 +35,35 @@ concrete failure in that project.
    the evidence: no overstatement, no understatement. See
    `references/guardrails.md` — these are hard rules, not suggestions.
 
+## Scale to the task (read before the pipeline)
+
+The full pipeline below is the path for taking a paper from raw
+results to a journal submission. **Most requests are smaller, and running all
+13 phases on them is a hassle, not a service.** Match the work to the ask:
+
+- "Restyle this section / make it read like <author>" → the style stack
+  (Layers 1–3) + the Phase-5 edit loop on that section. Skip venue corpus
+  measurement if the user only wants voice, not journal fit.
+- "Check my citations / find missing related work / audit these proofs" →
+  just that one Phase-6 pass.
+- "Get my finished draft submission-ready" → Phases 1, 6, 7, 8.
+- "Write the paper from my code and results" → the whole thing (Mode A).
+
+Only **the two laws** and the specific passes a request touches are
+mandatory. Everything else is a menu. When unsure how much to run, ask the
+user in one line rather than defaulting to the full pipeline. Setup phases
+(1–4) run once per project and are reused (not rebuilt) on later requests.
+
 ## Pipeline overview
 
 Start with the intake interview (`references/00-intake.md`): it selects
 **Mode A** (no draft yet — write the main draft from research artifacts;
 inserts phases R and D), **Mode B** (existing draft — restyle/harden;
 phase R runs in audit-only form), or **Mode C** (referee reports arrived —
-revision loop, `references/revision-mode.md`). Then run the phases in order. Each phase
-ends with a user checkpoint (STOP and get approval) before the next begins.
-Phases 1–4 are setup and typically run once; phases 5–7 loop.
+revision loop, `references/revision-mode.md`). For a full submission, run the
+phases in order, each ending with a user checkpoint (STOP and get approval)
+before the next; for a scoped request, run only the relevant slice (see
+"Scale to the task"). Phases 1–4 are setup and run once; phases 5–7 loop.
 
 | Phase | What happens | Reference | Checkpoint |
 |-------|--------------|-----------|------------|
@@ -201,11 +221,15 @@ Strictly sequential, section by section (§1 → §2 → … → appendix). Per 
 
 ## Phase 6 — Quality passes
 
-Run each as a separate, named pass with its own findings report; every
-proposed fix enters the manuscript as a red edit awaiting approval. Order that
-worked: coherence/notation → conciseness → adversarial review rounds (repeat
-until a round produces nothing new) → citation audit → figure integrity.
-Details and prompts in `references/05-review-passes.md` and
+A **menu**, not a mandatory chain — run the passes a paper needs, each as a
+separate named pass whose findings enter as red edits awaiting approval.
+Coherence/notation is near-universal; proof rigor applies only to theory
+papers; the positioning/novelty audit matters most when novelty is
+contested. For a full submission the order that worked is: coherence/notation
+→ proof rigor (theory) → conciseness → positioning/novelty → adversarial
+review rounds (repeat until a round produces nothing new) → citation audit →
+figure integrity. Details and prompts in `references/05-review-passes.md`,
+`references/positioning-audit.md`, `references/proof-rigor.md`, and
 `references/06-citation-audit.md`.
 
 ## Phases 7–8 — Compliance, bake, submission package
