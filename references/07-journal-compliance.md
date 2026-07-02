@@ -34,6 +34,11 @@ anything else proceeds.
 - [ ] Section skeleton matches venue norms (related work woven vs. separate;
       proofs in appendix; body ends, then references, then appendix — verify
       the venue's ordering explicitly)
+- [ ] **Formatting idiom matches the venue register**, not the model's
+      default: run-in-header density within the corpus norm (run
+      `scripts/check_headers.py`); no per-experiment "Discussion"/"Summary"
+      labels unless the corpus uses them; no checklist-style micro-headers
+      ("Normalization.", "Predictive accuracy.") beyond what Stratum A shows
 - [ ] Contribution list matches what the paper actually delivers; the
       abstract promises nothing the intro's contributions do not claim;
       validation work is not listed as a contribution

@@ -41,6 +41,19 @@ Typical sentence length and rhythm; paragraph length; how much signposting;
 where topic sentences carry the argument.
 > "<verbatim quote>" — <Paper>, p.<y>
 
+## Structure and formatting idiom
+
+The dimension the model gets wrong by default (it reaches for ML/CS-conference
+formatting). Measure from the corpus and record the target:
+
+- run-in header density in results: <count per subsection / per page> (often ~0)
+- results section is: prose-forward / header-segmented
+- interpretation lives: woven into results prose / one consolidated discussion
+  at the end / per-experiment "Discussion" label (record which the corpus uses)
+- sectioning depth: stops at `\subsection` / uses `\subsubsection` / run-in
+- lists vs. prose: <does the venue use itemize in results, or prose?>
+> "<verbatim quote or structural observation>" — <Paper>, §<x>, p.<y>
+
 ## Hedging norms
 
 The venue's calibration vocabulary and where it appears (results discussion,

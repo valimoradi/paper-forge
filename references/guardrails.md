@@ -73,3 +73,26 @@ append it here so no agent reintroduces it.
     redundancy ("verbose = explainable in fewer words without loss").
 22. Do not restate already-defined notation or results; one light prose
     cross-reference suffices.
+
+## Structure and formatting
+
+23. **The model's own defaults are the adversary — override them with corpus
+    measurement.** Wherever an LLM has a strong training-data habit (dense
+    bold run-in headers, a "Discussion" label after every experiment,
+    checklist-style micro-sections, hype vocabulary, ML/CS-conference
+    layout), that habit is almost certainly wrong for a prose-forward
+    journal. Section granularity, header density, and where interpretation
+    lives are taken from the venue corpus (Phase 1 structural-idiom
+    measurement), never inherited from what the model would write by default.
+    This is the root cause behind most style mistakes: the skill measured the
+    corpus for words but the model still supplied the *structure* from habit.
+24. **No sectioning command used as emphasis or as a micro-header.** Rule 19's
+    ban on `\textbf` in prose extends to `\paragraph{}`, `\subparagraph{}`,
+    and any bold run-in label used to tag a micro-topic
+    ("Ground-truth utility.", "Normalization.", "Predictive accuracy.") or to
+    mark a per-experiment "Discussion."/"Summary.". Use at most the run-in
+    density the venue corpus demonstrates (often ≈2–4 per experiment,
+    sometimes zero); fold interpretation into the closing prose of the
+    results rather than labeling it. Keep a run-in header only when it marks a
+    genuinely distinct scenario the corpus would also head (e.g. a separate
+    robustness test).

@@ -261,7 +261,9 @@ resubmission package with hard gates rechecked. Full procedure:
 `scripts/` ships runnable helpers (Python, stdlib): `check_gates.py` (hard
 gates: figures/tables/abstract/pages), `count_words.py` (per-section budget
 tracking), `bake_markup.py` (Phase-8 bake with zero-leftover and
-cite/label-parity verification), `check_register.py` (Layer-1 grep checks).
+cite/label-parity verification), `check_register.py` (Layer-1 grep checks),
+`check_headers.py` (run-in-header density + per-experiment "Discussion" label
+detection vs. the venue corpus — catches the model's ML/CS formatting habit).
 Non-LaTeX toolchains: `references/toolchains.md` maps every mechanic to
 Word and Markdown.
 

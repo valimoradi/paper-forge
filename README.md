@@ -97,6 +97,7 @@ scripts/
   count_words.py               per-section word budgets
   bake_markup.py               Phase-8 bake + zero-leftover + cite parity
   check_register.py            Layer-1 grep checks
+  check_headers.py             run-in-header density + "Discussion"-label idiom
 templates/
   revision-macros.tex          \rev/\revdel/\yel/\yeldel LaTeX macros
   claims-ledger-template.md    number/figure → script/data/commit provenance

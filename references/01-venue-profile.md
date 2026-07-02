@@ -106,6 +106,17 @@ and tabulate:
 - where proofs live (inline vs. appendix vs. e-companion)
 - contribution presentation (numbered list? prose? how many items?)
 - section skeleton (typical top-level structure)
+- **structural/formatting idiom** (the dimension an LLM gets wrong by
+  default — measure it explicitly):
+  - run-in header density: how many bold/`\paragraph{}`/`\subsubsection`
+    run-in labels per results subsection, per page? (many venues: near zero)
+  - is the results/numerics section **prose-forward** or **header-segmented**?
+  - where does interpretation live — woven into results prose, one
+    consolidated discussion at the end, or a per-experiment "Discussion"
+    label? (measure which; most OR/MS/econ/stats venues never label a
+    per-experiment "Discussion")
+  - sectioning depth (do papers go to `\subsubsection`/run-in, or stop at
+    `\subsection`?); use of itemize/enumerate vs. prose
 - claim register: how strongly results are stated; hedging conventions
 - typography: is `\textbf` used in running prose? (In OR/MS journals it is
   not; manual bolding is an AI tell and a register violation.)
@@ -139,6 +150,11 @@ Dimensions:
 - terminology conventions: which of several synonymous field terms this
   journal prefers, hyphenation, capitalization
 - sentence and paragraph norms; signposting density
+- **structure and formatting idiom**: run-in-header density, prose-forward
+  vs. header-segmented sections, where interpretation lives (woven /
+  consolidated / per-experiment "Discussion"), sectioning depth — measured,
+  because this is exactly where the model's ML/CS-paper default diverges from
+  most journals
 - hedging vocabulary and where it appears
 - a phrase bank of verbatim openers, transitions, and result-narration frames
   for the writer agent

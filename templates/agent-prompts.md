@@ -83,7 +83,13 @@ On conflicts, precedence is venue > author > base.
 
 Check section <X> against the venue profile at <path>: length target, section
 role (does content belong here vs. appendix?), contribution/claim placement,
-cross-reference style. Report deviations with fixes.
+cross-reference style. Also check the **formatting idiom** against the venue
+register's structural-idiom target: count run-in headers (`\paragraph{}`,
+`\subsubsection`, bold labels) and compare to the corpus density; flag any
+per-experiment "Discussion."/"Summary." label and any checklist micro-header
+the corpus would not use. Deviations here are the model's default leaking
+through — report each with the fix (fold into prose / delete label / keep
+only if it marks a distinct scenario). Report deviations with fixes.
 
 ---
 

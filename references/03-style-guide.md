@@ -35,12 +35,19 @@ compliance later. Close the guide with a consolidated Do/Don't checklist.
 11. **Hedging and limitations** — where limitation statements sit and how
     strong they are.
 12. **Analogies and domain grounding** — whether and how the author uses them.
+13. **Section structure & formatting idiom** — how the author segments a
+    section: run-in-header density (many OR/MS authors use almost none),
+    prose-forward vs. header-segmented results, where interpretation lives
+    (woven into prose vs. a labeled "Discussion"), sectioning depth. This is
+    the dimension an LLM overrides with its own ML/CS-conference habit unless
+    the corpus is measured for it; capture the author's actual density with
+    examples.
 
 ## Two-layer output
 
 Produce two artifacts:
 
-1. **`<AUTHOR>_STYLE_GUIDE.md`** (portable): the 12-dimension rulebook with
+1. **`<AUTHOR>_STYLE_GUIDE.md`** (portable): the 13-dimension rulebook with
    verbatim page-cited evidence. Domain specifics in the quotes are
    illustrative; the rules transfer to any technical paper.
 2. **`_STYLE_GUIDE.md`** (applied, lives next to the paper): a shorter
