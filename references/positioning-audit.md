@@ -41,9 +41,12 @@ from the paper profile.
    repositioning — sharpen the contribution wording to what is genuinely
    new relative to the found work, never spin or omission. The found paper
    gets cited and differentiated explicitly.
-6. **Insertion.** New citations enter through the standard rule: verified
-   against the downloaded source at insertion time, added as red edits with
-   the differentiating sentence.
+6. **Insertion.** New citations obey "no source, no cite" (guardrail 11): a
+   must-cite paper is added as a verified `\cite` only if its source is in
+   `sources/`. A must-cite paper that is gated/unobtainable does NOT get
+   cited on faith — it goes on `citations-needed.md` for the user to
+   download, with a `\needcite{...}` placeholder at the spot, and the
+   differentiating sentence is written once the source arrives.
 
 ## Output
 

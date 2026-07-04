@@ -36,9 +36,29 @@ actual source.
 - nonexistent venue (preprint cited as a journal article)
 - misattributed coinage (term credited to a book that quotes someone else)
 
-## Standing rule for all writing phases
+## The sources folder and the "no source, no cite" rule
 
-Never add a citation during drafting without verifying it against a
-downloaded source at insertion time. "I remember this paper" is how
-fabrications enter. If the source cannot be obtained now, mark the spot with
-a TODO macro and list it as unverified — do not typeset a guess.
+Every cited work has its PDF/source in the project's `sources/` folder, one
+file per bib key (a `sources/MANIFEST.md` maps key → filename). This is a
+**hard rule for all writing phases**: a `\cite` may be typeset only when its
+source is on disk. Never cite from memory, a search snippet, or a DOI alone —
+that is how fabrications and misattributions enter (see the failure taxonomy
+above).
+
+**Gated / unobtainable papers → hand them to the user, do not cite on faith.**
+When a paper must be cited but cannot be downloaded (paywall, no institutional
+access, book, unavailable preprint):
+
+1. Do NOT emit a real `\cite`. Put `\needcite{key — what it should support}`
+   at the spot; it renders conspicuously and greps to zero before submission.
+2. Add a row to `citations-needed.md`
+   (`templates/citations-needed-template.md`): title, authors, venue, year,
+   DOI/URL, the claim it supports, and why it is needed.
+3. Present the list to the user and ask them to download the sources into
+   `sources/`. Only once the file is present is the `\needcite` replaced with
+   a verified `\cite`.
+
+Both the citation audit (existing cites) and the positioning/novelty audit
+(proposed new cites) feed the same `citations-needed.md` queue. Run
+`scripts/check_citations.py` to flag any `\needcite` left in the manuscript
+and any `\cite` key with no matching source file.

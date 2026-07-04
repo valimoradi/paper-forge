@@ -41,9 +41,15 @@ append it here so no agent reintroduces it.
 
 ## Citations
 
-11. **Never typeset a citation from memory.** Verify against a downloaded
-    source at insertion time or mark it TODO/unverified. See
-    `06-citation-audit.md` for the six observed failure modes.
+11. **No source on disk, no `\cite`.** A citation may be typeset only if the
+    cited work's PDF/source is present in the project's sources folder
+    (`sources/`, one file per bib key). Never cite from memory, a
+    search-result snippet, or a DOI alone. If a needed paper is gated or
+    otherwise unobtainable, it does NOT get a real `\cite`: put
+    `\needcite{key — what it should support}` at the spot and add the paper
+    to `citations-needed.md` for the user to download. The paper never ships
+    with a `\needcite` left in it, and every `\cite` key must have its source
+    file. See `06-citation-audit.md`.
 
 ## Editing discipline
 

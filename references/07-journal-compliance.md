@@ -55,6 +55,10 @@ anything else proceeds.
 **Mechanics**
 - [ ] Reference style/bst per guidelines; every bib entry passed the
       citation audit
+- [ ] **Every `\cite` has its source in `sources/`; zero `\needcite`
+      placeholders remain** (run `scripts/check_citations.py`) — no citation
+      ships without its downloaded source, and `citations-needed.md` is empty
+      or its items resolved
 - [ ] Anonymization rules if double-blind; data/code statement per policy
 - [ ] Figures: format, fonts, no overflow past margins, colors sane in print
 

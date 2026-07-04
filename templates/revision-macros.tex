@@ -13,6 +13,11 @@
 \newcommand{\yel}[1]{\textcolor{orange}{#1}}              % new/changed text (style-only)
 \newcommand{\yeldel}[1]{\textcolor{orange}{\sout{#1}}}    % deleted text (style-only)
 
+% --- citation placeholder: use where a source is not yet downloaded ---
+% NEVER emit a real \cite for a paper whose source is not in sources/.
+% Renders conspicuously; must grep to zero before submission (see check_citations.py).
+\newcommand{\needcite}[1]{\textcolor{red}{\textbf{[CITE NEEDED: #1]}}}
+
 % --- retired macros from PREVIOUS rounds: render as plain text, never write again ---
 % Example: \newcommand{\NEW}[1]{#1}
 % Keep retired definitions here so old text still compiles, but agents must

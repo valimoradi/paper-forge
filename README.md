@@ -98,6 +98,7 @@ scripts/
   bake_markup.py               Phase-8 bake + zero-leftover + cite parity
   check_register.py            Layer-1 grep checks
   check_headers.py             run-in-header density + "Discussion"-label idiom
+  check_citations.py           no source on disk, no \cite (+ \needcite flags)
 templates/
   revision-macros.tex          \rev/\revdel/\yel/\yeldel LaTeX macros
   claims-ledger-template.md    number/figure → script/data/commit provenance
@@ -105,6 +106,7 @@ templates/
   venue-register-template.md   the journal's vocabulary/voice/phrase bank
   applied-style-guide-template.md  short per-manuscript style distillation
   response-to-reviewers-template.md  Mode C issue ledger + letter skeleton
+  citations-needed-template.md   download queue for gated/unsourced cites
   venue-profile-template.md    skeleton for the measured venue profile
   style-guide-template.md      skeleton for the author style guide
   agent-prompts.md             copy-paste prompts for all 9 agent roles

@@ -263,7 +263,9 @@ gates: figures/tables/abstract/pages), `count_words.py` (per-section budget
 tracking), `bake_markup.py` (Phase-8 bake with zero-leftover and
 cite/label-parity verification), `check_register.py` (Layer-1 grep checks),
 `check_headers.py` (run-in-header density + per-experiment "Discussion" label
-detection vs. the venue corpus — catches the model's ML/CS formatting habit).
+detection vs. the venue corpus — catches the model's ML/CS formatting habit),
+`check_citations.py` (enforces "no source on disk, no `\cite`": flags
+`\needcite` placeholders and cited keys with no file in `sources/`).
 Non-LaTeX toolchains: `references/toolchains.md` maps every mechanic to
 Word and Markdown.
 
