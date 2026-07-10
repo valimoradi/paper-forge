@@ -71,7 +71,14 @@ append it here so no agent reintroduces it.
 
 ## Register
 
-19. No `\textbf` in running prose or as pseudo-headers.
+19. **No bold anywhere the ink is content.** No `\textbf` in running prose or
+    as pseudo-headers; no `\mathbf`/`\boldsymbol`/`\bm` on vectors or matrices
+    (plain italic per the corpus convention — `x`, not `\mathbf{x}`); no bolded
+    table cells or "best" numbers. Apply the chosen convention uniformly
+    paper-wide (a mixed manuscript is a defect); documented exceptions only —
+    a ones-vector macro, graphical figure labels — and every one is listed in
+    the applied style guide. See `academic-register.md` → "Math and typographic
+    conventions".
 20. No em-dashes, rhetorical questions, hype words, colloquialisms,
     rule-of-three tics, formulaic transitions, second person.
 21. **No padding to seem accessible, no cutting purely to hit a word count.**

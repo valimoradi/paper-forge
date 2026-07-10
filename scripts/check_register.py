@@ -3,9 +3,11 @@
 
 Usage: python check_register.py paper.tex
 
-Reports em-dashes, question marks in prose, \\textbf in running prose, and
-banned filler words. Findings are pointers for a human/agent pass, not
-auto-fixes; some hits are legitimate (verbatim quotes, research questions).
+Reports em-dashes, question marks in prose, \\textbf in running prose, bold
+math (\\mathbf/\\boldsymbol/\\bm — vectors should be plain italic), and banned
+filler words. Findings are pointers for a human/agent pass, not auto-fixes;
+some hits are legitimate (verbatim quotes, research questions, and the
+documented bold exceptions such as a \\one ones-vector macro).
 """
 import re, sys
 from pathlib import Path
@@ -32,6 +34,8 @@ def main() -> int:
             checks.append("question mark")
         if re.search(r"\\textbf\{", prose) and not re.match(r"\s*\\(section|subsection|paragraph|caption)", line):
             checks.append("\\textbf in prose")
+        if re.search(r"\\(mathbf|boldsymbol|bm)\b", line):
+            checks.append("bold math (vectors/matrices should be plain italic)")
         low = prose.lower()
         for w in BANNED_WORDS:
             if w in low:

@@ -40,11 +40,23 @@ Prompt templates in `templates/agent-prompts.md`.
    Commit after each section clears the chain. The verbosity standard: "text
    was verbose if the topic can be explained without any loss of context in
    fewer words." Cutting purely to hit a number is as forbidden as padding.
-5. **Coherence/notation sweeper.** Whole-paper passes checking: every symbol
-   has one consistent meaning; conventions (e.g. ε*, β*) used identically in
-   every section; no redefinition of already-introduced objects; cross-refs
-   resolve; main-text statements of propositions match their appendix proofs
+5. **Coherence & flow sweeper.** Whole-paper passes on two axes.
+   *Notation:* every symbol has one consistent meaning; conventions (e.g. ε*,
+   β*) used identically in every section; no redefinition of already-introduced
+   objects; one typographic convention throughout (vectors plain italic, no
+   stray `\mathbf`/bold — see `academic-register.md`); cross-refs resolve;
+   main-text statements of propositions match their appendix proofs
    **including inequality directions** (check the proof, not the prose).
+   *Narrative cohesion:* parallel sections (e.g. several experiments) render in
+   one identical format — same heading style, same subsection order, same
+   metric names and terminology (one phrasing everywhere: "monotone
+   non-decreasing" in every spot, not "monotone" in one and the longer form in
+   another); cross-references point outward, never at their own section (a
+   `\ref` resolving to the section it sits in reads as broken and self-
+   referential); a headline sentence flags the same outliers and caveats its
+   own table or figure shows; the section-to-section handoffs read as one
+   argument, not stitched-together drafts. This pass is cheap and unblocks the
+   others — run it first, and again after any structural change.
 6. **Claims-vs-evidence auditor.** For every empirical sentence: locate the
    number/figure/code output that supports it. Flags (a) claims with no
    artifact behind them, (b) claims stronger than the artifact ("real-world
@@ -73,7 +85,7 @@ Prompt templates in `templates/agent-prompts.md`.
 
 ## Recommended Phase-6 order
 
-1. Coherence/notation sweep (cheap, unblocks everything else)
+1. Coherence & flow sweep (cheap, unblocks everything else)
 2. Proof rigor (theory papers — before prose polish, since repairs change
    prose)
 3. Conciseness pipeline, section by section

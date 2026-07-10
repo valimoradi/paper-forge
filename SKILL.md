@@ -223,7 +223,10 @@ Strictly sequential, section by section (§1 → §2 → … → appendix). Per 
 
 A **menu**, not a mandatory chain — run the passes a paper needs, each as a
 separate named pass whose findings enter as red edits awaiting approval.
-Coherence/notation is near-universal; proof rigor applies only to theory
+The coherence & flow sweep (notation consistency, uniform typography, and
+cross-section narrative cohesion — parallel sections rendered alike,
+terminology identical everywhere, no self-referential cross-refs) is
+near-universal; proof rigor applies only to theory
 papers; the positioning/novelty audit matters most when novelty is
 contested. For a full submission the order that worked is: coherence/notation
 → proof rigor (theory) → conciseness → positioning/novelty → adversarial
@@ -261,7 +264,7 @@ resubmission package with hard gates rechecked. Full procedure:
 `scripts/` ships runnable helpers (Python, stdlib): `check_gates.py` (hard
 gates: figures/tables/abstract/pages), `count_words.py` (per-section budget
 tracking), `bake_markup.py` (Phase-8 bake with zero-leftover and
-cite/label-parity verification), `check_register.py` (Layer-1 grep checks),
+cite/label-parity verification), `check_register.py` (Layer-1 grep checks incl. `\mathbf`/bold typography),
 `check_headers.py` (run-in-header density + per-experiment "Discussion" label
 detection vs. the venue corpus — catches the model's ML/CS formatting habit),
 `check_citations.py` (enforces "no source on disk, no `\cite`": flags

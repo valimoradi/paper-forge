@@ -29,8 +29,38 @@ every word means exactly what it says. The reader is a skeptical expert.
    concise").
 8. **Unqualified over-claiming** — superlatives and universals ("always",
    "guarantees", "solves") only where the evidence is a proof.
-9. **Manual emphasis** — no `\textbf`/bold or italics-for-emphasis in
-   running prose; emphasis comes from sentence structure.
+9. **Manual emphasis and bold** — no `\textbf`, bold, or italics-for-emphasis
+   anywhere the reader reads as content: running prose, pseudo-headers, and
+   table cells. Emphasis comes from sentence structure, not weight. Math
+   notation is bold-free too; see "Math and typographic conventions" below.
+
+## Math and typographic conventions
+
+Typography is a paper-wide invariant, not a per-passage choice: fix the
+convention once from the target author/venue corpus and apply it identically
+everywhere. Absent corpus evidence for a different convention, the defaults are:
+
+1. **Vectors and matrices are plain italic, not bold.** Write the decision
+   vector, parameter, and feature matrix as `x`, `\theta`, `A` — never
+   `\mathbf{x}`, `\boldsymbol{\theta}`, `\mathbf{A}`. This follows the modern
+   OR/optimization convention (e.g. Jonathan Li's papers). Some fields do bold
+   vectors, so confirm against the corpus; but once chosen the convention is
+   uniform. A mixed manuscript (some vectors bold, some plain) is always a
+   defect, regardless of which convention won.
+2. **No bold anywhere the ink is content** — not in math (`\mathbf`,
+   `\boldsymbol`, `\bm`), not in table cells or numeric entries (a "best" row
+   is marked by structure, a rule, or a note, not by bolding the number), not
+   as prose emphasis.
+3. **Documented exceptions only.** A small, explicitly listed set may stay bold
+   when weight carries meaning the plain glyph would lose: a ones-vector macro
+   (`\one = \mathbf{1}`, disambiguating from the scalar 1), graphical figure
+   panel labels, and Left:/Right: caption anchors. List every exception in the
+   applied style guide so a checker agent does not "correct" them.
+
+Applying or switching this convention is a single typographic-normalization
+pass over the whole manuscript (un-bold every `\mathbf`, strip emphasis-bold
+from tables), verified by grep to zero remaining hits outside the exception
+list — not a drive-by fix during a prose pass.
 
 ## Fidelity when editing existing text
 
@@ -46,6 +76,8 @@ document's existing delimiter convention.
 - grep `? ` outside of research-questions sections; justify every hit
 - diff the `\cite`/`\label`/`\ref` sets before vs. after the pass: identical
 - word-level diff shows changes only in prose, never inside math environments
+- grep `\mathbf`/`\boldsymbol`/`\bm` and `\textbf` = 0 outside the documented
+  exception list (vectors plain italic, no bold table cells)
 - document compiles; page count moved only as expected
 
 ## What to KEEP
